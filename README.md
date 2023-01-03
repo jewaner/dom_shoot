@@ -5,7 +5,7 @@ DOM-SHOOT a landing page airsoft website built with TypeScript, Tailwind CSS, an
 </p>
 
 ## DEMO
-https://dom-shot.netlify.app/
+https://dom-shoot.netlify.app
 
 
 ## Tech uses
