@@ -25,7 +25,7 @@ Instructions to copy the project up and running on your local machine for develo
 1. Clone the repository
 
    ```
-   git clone https://github.com/ccrsxx/buburnusantara.com.git
+   git clone https://github.com/jewaner/dom_shoot.git
    ```
 
 2. Install dependencies
