@@ -3,6 +3,7 @@ import type { InputFieldProps } from './input-field';
 
 export type InputReserveProps = InputFieldProps & {
   useSelect?: boolean;
+  useSelectSpot ?: boolean;
 };
 
 export function InputReserve({
@@ -12,8 +13,7 @@ export function InputReserve({
   label,
   customId,
   useSelect,
-  useSelectSpot,
-  useTextArea
+  useSelectSpot
 }: InputReserveProps): string {
   return html`
     <div class="${style ?? ''} grid gap-1">

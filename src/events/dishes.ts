@@ -1,67 +1,67 @@
-import { menuButtons, menuCategories } from '@lib/elements';
-import type { Menu } from '@lib/types/spots';
+import { spotsButtons, spotsCategories } from '@lib/elements';
+import type { Spots } from '@lib/types/spots';
 
-const cachedCurrentMenu = localStorage.getItem('currentMenu') as Menu;
+const cachedCurrentMenu = localStorage.getItem('currentSpots') as Spots;
 
-let currentMenu: Menu = cachedCurrentMenu ?? 'utama';
-let prevMenu: Menu;
+let currentSpots: Spots = cachedCurrentMenu ?? 'Industriel';
+let prevSpots: Spots;
 
 let isFirstRender = true;
 
-highlightMenuButton(currentMenu);
-toggleMenuCategory(currentMenu);
+highlightMenuButton(currentSpots);
+toggleMenuCategory(currentSpots);
 
 setTimeout(() => (isFirstRender = false), 500);
 
-menuButtons.forEach((menuButton) => {
-  const menuId = menuButton.id as Menu;
-  menuButton.addEventListener('click', handleChangeMenu(menuId));
+spotsButtons.forEach((spotsButton) => {
+  const spotsId = spotsButton.id as Spots;
+  spotsButton.addEventListener('click', handleChangeMenu(spotsId));
 });
 
-function handleChangeMenu(menuId: Menu) {
+function handleChangeMenu(spotsId: Spots) {
   return (): void => {
-    if (currentMenu === menuId) return;
+    if (currentSpots === spotsId) return;
 
-    prevMenu = currentMenu;
-    currentMenu = menuId;
+    prevSpots = currentSpots;
+    currentSpots = spotsId;
 
-    localStorage.setItem('currentMenu', currentMenu);
+    localStorage.setItem('currentMenu', currentSpots);
 
-    highlightMenuButton(menuId);
-    toggleMenuCategory(menuId);
+    highlightMenuButton(spotsId);
+    toggleMenuCategory(spotsId);
   };
 }
 
-function highlightMenuButton(menuId: Menu): void {
-  menuButtons.forEach((menuButton) => {
-    const menuButtonId = menuButton.id as Menu;
-    if (menuButtonId === menuId) {
-      menuButton.classList.add('active');
-      menuButton.tabIndex = -1;
+function highlightMenuButton(spotsId: Spots): void {
+  spotsButtons.forEach((spotsButton) => {
+    const spotsButtonId = spotsButton.id as Spots;
+    if (spotsButtonId === spotsId) {
+      spotsButton.classList.add('active');
+      spotsButton.tabIndex = -1;
     } else {
-      menuButton.classList.remove('active');
-      menuButton.tabIndex = 0;
+      spotsButton.classList.remove('active');
+      spotsButton.tabIndex = 0;
     }
   });
 }
 
-function toggleMenuCategory(menuId: Menu): void {
-  menuCategories.forEach((menuCategory) => {
-    const menuCategoryId = menuCategory.dataset.category as Menu;
+function toggleMenuCategory(spotsId: Spots): void {
+  spotsCategories.forEach((spotsCategory) => {
+    const spotsCategoryId = spotsCategory.dataset.category as Spots;
 
-    if (menuCategoryId === menuId) {
-      if (!prevMenu) menuCategory.style.display = '';
+    if (spotsCategoryId === spotsId) {
+      if (!prevSpots) spotsCategory.style.display = '';
       setTimeout(() => {
-        menuCategory.style.display = '';
+        spotsCategory.style.display = '';
         if (!isFirstRender)
-          setTimeout(() => menuCategory.classList.add('show'), 100);
+          setTimeout(() => spotsCategory.classList.add('show'), 100);
       }, 500);
-    } else if (prevMenu === menuCategoryId) {
-      menuCategory.classList.remove('show');
-      setTimeout(() => (menuCategory.style.display = 'none'), 500);
+    } else if (prevSpots === spotsCategoryId) {
+      spotsCategory.classList.remove('show');
+      setTimeout(() => (spotsCategory.style.display = 'none'), 500);
     } else {
-      menuCategory.classList.remove('show');
-      menuCategory.style.display = 'none';
+      spotsCategory.classList.remove('show');
+      spotsCategory.style.display = 'none';
     }
   });
 }

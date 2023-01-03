@@ -1,6 +1,6 @@
-import type { Product } from '@lib/types/salle';
+import type { Salle } from '@lib/types/salle';
 
-export const favorites: Readonly<Product[]> = [
+export const favorites: Readonly<Salle[]> = [
   {
     name: 'Bubur Ayam Kampung',
     price: 25_000,

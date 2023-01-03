@@ -1,6 +1,6 @@
-type ProductImage = Record<'name' | 'image', string>;
+type SalleImage = Record<'name' | 'image', string>;
 
-export const productImages: Readonly<ProductImage[]> = [
+export const salleImages: Readonly<SalleImage[]> = [
   {
     name: 'Bubur Ayam Kampung',
     image: '/assets/offer/offer-1.webp'

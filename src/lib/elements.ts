@@ -4,7 +4,7 @@ const navLinks: NodeListOf<HTMLAnchorElement> =
 const hiddenSections: NodeListOf<HTMLElement> =
   document.querySelectorAll('.hidden-section');
 
-const menuButtons: NodeListOf<HTMLButtonElement> =
+const spotsButtons: NodeListOf<HTMLButtonElement> =
   document.querySelectorAll('.menu-button');
 
 const viewableImages: NodeListOf<HTMLImageElement> =
@@ -13,7 +13,7 @@ const viewableImages: NodeListOf<HTMLImageElement> =
 const imageModalLinks: NodeListOf<HTMLAnchorElement> =
   document.querySelectorAll('.image-modal-link');
 
-const menuCategories: NodeListOf<HTMLDivElement> =
+const spotsCategories: NodeListOf<HTMLDivElement> =
   document.querySelectorAll('.menu-category');
 
 const navbar = document.getElementById('navbar') as HTMLElement;
@@ -92,10 +92,10 @@ export {
   imageModal,
   toastModal,
   contactForm,
-  menuButtons,
+  spotsButtons,
   checkmarkIcon,
   viewableImages,
-  menuCategories,
+  spotsCategories,
   hiddenSections,
   imageModalImage,
   imageModalLinks,

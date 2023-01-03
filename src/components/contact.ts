@@ -1,6 +1,4 @@
 import { html } from '@lib/utils';
-import { contactInfos } from '@constants/contact';
-import { CustomIcon } from './ui/custom-icon';
 import { InputField } from './common/input-field';
 import type { InputFieldProps } from './common/input-field';
 

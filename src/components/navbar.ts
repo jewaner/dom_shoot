@@ -2,7 +2,7 @@ import { html } from '@lib/utils';
 
 type ValidSection =
   | 'home'
-  | 'spot'
+  | 'spots'
   | 'about'
   | 'contact';
 
@@ -13,7 +13,7 @@ type NavLink = {
 
 const navLinks: Readonly<NavLink[]> = [
   { name: 'Home', href: '#home' },
-  { name: 'spots', href: '#spots' },
+  { name: 'Spots', href: '#spots' },
   { name: 'About', href: '#about' },
   { name: 'Contact', href: '#contact' }
 ];

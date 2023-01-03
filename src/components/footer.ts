@@ -1,6 +1,4 @@
 import { html } from '@lib/utils';
-import { openHours, footerLinks } from '@constants/footer';
-
 export function Footer(): string {
   return html`
     <footer class="hidden-section grid justify-items-center gap-4 bg-[#000]">
