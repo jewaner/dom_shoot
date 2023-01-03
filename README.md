@@ -4,6 +4,10 @@
 DOM-SHOOT a landing page airsoft website built with TypeScript, Tailwind CSS, and Vite
 </p>
 
+## DEMO
+https://dom-shot.netlify.app/
+
+
 ## Tech uses
 
 - [Vite](https://vitejs.dev/)
